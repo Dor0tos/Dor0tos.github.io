@@ -203,19 +203,21 @@ a.flex-item:hover {
     transition-duration: 250ms;
 }
 
+.back-hex {
+    background-image: url(images/Hexagon_new.png);
+    height: 150px;
+    width: 134px;
+}
+
 .selector {
     display: flex;
     justify-content: center;
 
-    background-image: url(images/Hexagon_new.png);
-    height: 150px;
-    width: 134px;
-    
+    cursor: pointer;
 }
 
-.selector img {
+.back-hex img {
     align-self: flex-start;
-    margin-top: 15px;
 
     transition-duration: 250ms;
 }
@@ -259,14 +261,32 @@ a.flex-item:hover {
         #0000001f 48%);
 }
 
+.activity-section {
+    padding-top: 50px;
+    height: 100vh;
+}
+
 .activity-head {
     display: flex;
-    background: #23FF98;
     height: 75px;
 }
 
 .activity-name {
+    display: flex;
     line-height: 75px;
     font-size: 72px;
+    padding-left: 122px;
+    background: #23FF98;
     color: #38343D;
+}
+
+.activity-name p {
+    padding: 0 25px;
+}
+
+.activity-icon {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -45%;
 }
