@@ -188,9 +188,20 @@ a.flex-item:hover {
     height: 150px;
 }
 
+
 .section-selector {
     transition-duration: 250ms;
     margin: auto;
+}
+
+.width-lock img {
+    width: 100%;
+    height: auto;
+}
+
+.height-lock img {
+    width: auto;
+    height: 100%;
 }
 
 .section-selector:hover {
@@ -263,12 +274,20 @@ a.flex-item:hover {
 
 .activity-section {
     padding-top: 50px;
-    height: 100vh;
 }
 
 .activity-head {
     display: flex;
     height: 75px;
+}
+
+.activity-head {
+    display: flex;
+    height: 75px;
+}
+
+.activity-body {
+    margin-top: 50px;
 }
 
 .activity-name {
@@ -289,4 +308,42 @@ a.flex-item:hover {
     justify-content: center;
     position: relative;
     top: -45%;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    height: 150px;
+    overflow: hidden;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: #14131473 0px 3px 3px;
+}
+
+.images-container {
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+.images-container img {
+    max-height: 100%;
+    width: auto;
+}
+
+.images-container .image-container {
+    display: inline-block;
+    height: 300px;
+}
+
+.image-viewver .preview-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline;
+    max-height: 60vh;
+    width: auto;
 }

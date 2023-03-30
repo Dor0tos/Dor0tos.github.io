@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Адаптивная вёрстка сайта</title>
+  <title>Dorotos | Pixel-Art</title>
   <link rel="stylesheet" type="text/css" href="style.css"> 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <header>
    <div class="flex-container">
@@ -18,14 +19,11 @@
             Навыки
         </a>
         <a class="flex-item">
-            Портфолио
-        </a>
-        <a class="flex-item">
             Контакты
         </a>
    </div>
 </header>
-<body>
+<body id="app-main">
     <div class="main-block">
         <img class="avatar" src="images/Аватар.png">
         <div class="hello-text">
@@ -36,20 +34,21 @@
         <div class="deco-div-shadow"></div>
         <div class="deco-div"></div>
         
-        <div class="selector-menu">
-            <a class="section-selector selector back-hex" data-selector="Пиксель Арт" href="#pixel-art">
+        <div class="selector-menu" id="selector-menu">
+            <a class="section-selector selector height-lock  back-hex" data-selector="Пиксель Арт" href="#pixel-art">
                 <img src="images/pixelart.png" style="margin-top: -15px;"/>
             </a>
-            <a class="section-selector selector back-hex" data-selector="Low-Poly" href="#low-poly">
+            <a class="section-selector selector width-lock  back-hex" data-selector="Low-Poly" href="#low-poly">
                 <img src="images/Donut.png" style="margin-top: 15px;"/>
             </a>
-            <a class="section-selector selector back-hex" data-selector="Дизайн" href="#design">
-                <img src="images/design icon.png"/>
+            <a class="section-selector selector height-lock back-hex" data-selector="Дизайн" href="#design">
+                <img src="images/Desing_Icon.png"/>
             </a>
             <a class="section-selector selector back-hex" data-selector="Программирование" href="#code">
 
             </a>
         </div>
+        <script src="index.js"></script>
         
     </div>
     <main>
@@ -65,8 +64,14 @@
                     <img src="images/Deco_01.png"/>
                 </div>
             </div>
-            <div class="activity-body" style="height: 500px;">
-
+            <div class="activity-body">
+                <div class="images-container" id="images-container">
+                    <template v-for="image in images">
+                        <div class="image-container">
+                            <img class="preview-image" :src="image.path" alt="Your Image" @click="openModal">
+                        </div>
+                    </template>
+                </div>
             </div>
         </div>
         <div class="activity-section" id="low-poly">
