@@ -1,98 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dorotos | Pixel-Art</title>
-  <link rel="stylesheet" type="text/css" href="style.css"> 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-</head>
-<header>
-   <div class="flex-container">
-    <div class="flex-item" style="margin-right: -40px;"><img src="images/logo.png" style="width: 50%;"></div>
-    <div class="flex-item"><img src="images/DOROTOS.png" style="width: 50%;"></div>
-    <div class="menu">
-        <a class="flex-item" href="#section-3d">
-            Обо мне
-        </a>
-        <a class="flex-item">
-            Навыки
-        </a>
-        <a class="flex-item">
-            Контакты
-        </a>
-   </div>
-</header>
-<body id="app-main">
-    <div class="main-block">
-        <img class="avatar" src="images/Аватар.png">
-        <div class="hello-text">
-            <p class="hello-top">Привет, я</p>
-            <p class="hello-middle">Дмитрий Рогачев</p>
-            <p class="hello-bottom">Пиксель-арт художник</p>
-        </div>
-        <div class="deco-div-shadow"></div>
-        <div class="deco-div"></div>
-        
-        <div class="selector-menu" id="selector-menu">
-            <a class="section-selector selector height-lock  back-hex" data-selector="Пиксель Арт" href="#pixel-art">
-                <img src="images/pixelart.png" style="margin-top: -15px;"/>
-            </a>
-            <a class="section-selector selector width-lock  back-hex" data-selector="Low-Poly" href="#low-poly">
-                <img src="images/Donut.png" style="margin-top: 15px;"/>
-            </a>
-            <a class="section-selector selector height-lock back-hex" data-selector="Дизайн" href="#design">
-                <img src="images/Desing_Icon.png"/>
-            </a>
-            <a class="section-selector selector back-hex" data-selector="Программирование" href="#code">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRT.Space</title>
+    <script type="module" crossorigin src="/assets/index-4jH2tdMp.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-9qRXjWI1.css">
+  </head>
+  <body>
+    <div id="app"></div>
 
-            </a>
-        </div>
-        <script src="index.js"></script>
-        
-    </div>
-    <main>
-        <div class="activity-section" id="pixel-art">
-            <div class="activity-head">
-                <div class="activity-name">
-                    <div class="activity-icon back-hex">
-                        <img src="images/Donut.png" style="margin-top: 15px;"/>
-                    </div>
-                    <p>Пиксель арт</p>
-                </div>
-                <div class="activity-deco">
-                    <img src="images/Deco_01.png"/>
-                </div>
-            </div>
-            <div class="activity-body">
-                <div class="images-container" id="images-container">
-                    <template v-for="image in images">
-                        <div class="image-container">
-                            <img class="preview-image" :src="image.path" alt="Your Image" @click="openModal">
-                        </div>
-                    </template>
-                </div>
-            </div>
-        </div>
-        <div class="activity-section" id="low-poly">
-            <div class="activity-head">
-                <div class="activity-name">
-                    <div class="activity-icon back-hex">
-                        <img src="images/Donut.png"/>
-                    </div>
-                    <p>Low-Poly</p>
-                </div>
-                <div class="activity-deco">
-                    <img src="images/Deco_01.png"/>
-                </div>
-            </div>
-            <div class="activity-body" style="height: 500px;">
-
-            </div>
-        </div>
-    </main>
-</body>
-<footer>
-    © Рогачев Д.Д. , 2017—2023
-</footer>
+  </body>
 </html>
