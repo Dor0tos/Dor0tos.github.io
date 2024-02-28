@@ -1,3 +1,0 @@
-<tempalte>
-    <div></div>
-</tempalte>
